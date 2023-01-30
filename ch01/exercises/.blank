@@ -1,0 +1,10 @@
+print(1,"2",3.0)
+print ( 1 + 1)
+print(5**2)
+## Container Types data that only holds other data 
+##list, 
+myList = ["Hello","Goodbye"]
+print(myList[1])
+##First item in the list 0 
+colors = ["red","green","blue"]
+print(colors)
