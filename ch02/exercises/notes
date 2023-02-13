@@ -1,0 +1,26 @@
+import math 
+import turtle 
+# amount = float(input("Enter ammount ot exchange ")) 
+# exhcange = float(input("Enter the exchange rate"))
+#finalvalue = amount * exhcange
+myNums = [ ]
+for i in range (0,3):
+    var = int(input("Enter a number"))
+    myNums.append(var)
+    print (myNums)
+colors = ["red","blue","tan","orange","aquamarine"]
+for elem in colors:
+    print(elem)
+myList = [1,3,4,5,6,7,8]
+for i in myList:
+    print(i)
+for i in range(5):
+    print("Hello")
+result = range(5)
+print(list(result))
+result = range(1,20,2)
+print(list(result))
+print(list(11))
+result =(3,10,2)
+
+##For Loop repeat a sequential algo on sequential data

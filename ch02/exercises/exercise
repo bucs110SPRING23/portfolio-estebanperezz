@@ -1,0 +1,20 @@
+import pygame
+pygame.init() 
+screen = pygame.display.set_mode()
+#screen: var , pygame: module, display;submodule 
+screen.fill("red")
+pygame.display.flip()
+pygame.time.wait(1000)
+pygame.display.flip()
+screen.fill("green")
+pygame.time.wait(1000)
+pygame.display.flip()
+#X, Y, Width, Height
+screensize = screen.get_size()
+dimensions = [ 100,200,250,250]
+pygame.draw.rect(screen,"red",dimensions)
+pygame.display.flip()
+dimensions = [300,300,250,250]
+pygame.draw.rect(screen,"green",dimensions)
+pygame.display.flip()
+pygame.time.wait(1000)
