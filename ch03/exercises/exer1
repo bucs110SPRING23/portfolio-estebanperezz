@@ -1,0 +1,19 @@
+import random 
+# a = int(input("num: "))
+# x=random.randrange(1,11)
+# if a < x:
+#     print("guess again the number is too low")
+# elif a>x:
+#     print("guess again the number is too high")
+# elif a == x:
+#     print("correct!")
+numlist = int(input("Enter a list of 5 numbers"))
+for i in range(numlist+1):
+    print("number",i)
+    numlist = int(input("Enter a list of 5 numbers"))
+    if  not numlist % 3 == 0 and i % 5 == 0 :
+        print("fizzbuzz")
+    elif i % 3 == 0:
+        print("fizz")
+    elif i % 5 == 0:
+        print("buzz")
