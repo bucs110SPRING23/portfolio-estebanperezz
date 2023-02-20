@@ -2,7 +2,8 @@ import pygame
 pygame.init()
 screen= pygame.display.set_mode()
 dimensions = pygame.display.get_window_size()
-starting_point = [dimensions[0]//2,dimensions[0]//2 + 200]
+print (dimensions)
+starting_point = [dimensions[0]//2,dimensions[0]//2]
 # pygame.draw.circle(screen,"red",[500,190],35)
 # pygame.draw.circle(screen,"green",[500,260],45)
 # pygame.draw.circle(screen,"blue",[500,350],55)
@@ -12,7 +13,5 @@ for _ in range(3):
     starting_point[1]=starting_point[1]-radius
     radius = radius //2
     starting_point[1]=starting_point[1]-radius
-
-
 pygame.display.flip()
 input()
