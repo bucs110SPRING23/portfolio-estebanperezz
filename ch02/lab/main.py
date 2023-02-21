@@ -46,16 +46,19 @@ numsides = [6,20,100,360]
 side_length = 50 
 xpos = 400
 ypos = 300
-for i in numsides:
+for i in range(4):
     window.fill("cyan")
     pygame.display.flip()
-    for i in range(len(numsides)):
+    tempside= numsides[i]
+    for i in range(tempside):
 
-        angle=360/numsides
+        angle=360/tempside
         radians = math.radians(angle * i)
         x = xpos + side_length * math.cos(radians)
         y = ypos + side_length * math.sin(radians)
-        points.append(x,y)
+        points.append([x,y])
     pygame.draw.polygon(window,"green",points)
+    points = [] 
+    pygame.display.flip()
     pygame.time.wait(1000)
 window.exitonclick()
