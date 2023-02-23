@@ -7,13 +7,79 @@ import random
 #     print("guess again the number is too high")
 # elif a == x:
 #     print("correct!")
-numlist = int(input("Enter a list of 5 numbers"))
-for i in range(numlist+1):
-    print("number",i)
-    numlist = int(input("Enter a list of 5 numbers"))
-    if  not numlist % 3 == 0 and i % 5 == 0 :
-        print("fizzbuzz")
-    elif i % 3 == 0:
-        print("fizz")
-    elif i % 5 == 0:
-        print("buzz")
+# numlist = int(input("Enter a list of 5 numbers"))
+# for i in range(numlist+1):
+#     print("number",i)
+#     numlist = int(input("Enter a list of 5 numbers"))
+#     if  not numlist % 3 == 0 and i % 5 == 0 :
+#         print("fizzbuzz")
+#     elif i % 3 == 0:
+#         print("fizz")
+#     elif i % 5 == 0:
+# #         print("buzz")
+# mystr = "hello"
+# mynums = [ 1,2,3,4,5]
+# for _ in mystr:
+#     print(_)
+# for num in mynums:
+#     print(num)
+# #mutable = changable 
+# #immutable = can't change it once created 
+# num = 5 
+# mystr = "hello" #immutable 
+# myotherstring = "hello"
+# if mystr == myotherstring:
+#     print("MOFO")
+# if mystr is myotherstring:
+#     print("YES")
+#substring 
+# mystr = "hello"
+# print(mystr[0])
+# print(mystr[1:4])
+# mystr = "J" + mystr[1:5]
+# print(mystr)
+# ## iterable objects are not always mutable 
+# mynums = [1,2,3,4,5]
+# mynums[2:2] =[2.5]
+# print(mynums)
+# for i, v in enumerate(mynums):
+#     print (v)
+#     mynums[i]= v * 2 
+# print(mynums)
+mynums =(5,8,1,12483788,5) ## Tuple 
+# mynums[2] = 2.6 
+x = 5 
+y = 6 
+(x,y)=(y,x)
+num = [5] * 3 
+print(num)
+num = (5,) * 3 
+print(num)
+mynums = [5,8,1,123456789,5]
+print(list(enumerate(mynums)))
+x , y = (5,6)
+for i, v in enumerate(mynums):
+    print(i,v)
+contacts = {
+    "bill":"867-5300",
+    "jane": "555-1212"
+}
+#Worst Case Scenario 
+##looping n times, where n is the number of items 
+# for contacts in contacts:
+#     if contacts[0] == name:
+#         print(contacts[1])
+#         break
+#relationship index --> value 
+print (contacts["jane"])
+contacts["joe"] ="555-1213"
+print(contacts)
+for c in contacts:
+    print(c)
+    print(contacts[c])
+for key in contacts.keys(): 
+    print(key)
+    ##items enumerate for dictionaries
+#dictionary 
+if contacts.get("juan"):
+    print(contacts["juan"])
