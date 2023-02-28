@@ -44,7 +44,7 @@ if turns == 0:
             font.read
 for c, hb in hitboxes.items():
      box = pygame.draw.rect(screen,c,hb)
-     screen.
+     screen
 ## X and y cordinates 
 ##width and height=
 #Rectangles do not track visuals 
