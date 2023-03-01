@@ -49,3 +49,4 @@ for c, hb in hitboxes.items():
 ##width and height=
 #Rectangles do not track visuals 
 #pygame.rect 
+#done = false 
