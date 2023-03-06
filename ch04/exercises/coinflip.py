@@ -31,7 +31,7 @@ while is_in_screen(window,michelangelo):
         michelangelo.right(angle)
     else:
         michelangelo.left(angle)
+is_in_screen(window,michelangelo)
 
-  
 window.exitonclick() 
 
