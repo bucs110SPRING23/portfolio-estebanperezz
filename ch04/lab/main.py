@@ -28,7 +28,8 @@ screen.blit(text2, (400,0))
 pygame.display.flip()
 play1bet = False 
 play2bet = False
-
+player1 = 0 
+player2 = 0 
 events = True
 def drawBoard():
      pygame.draw.circle(screen, color ="red",center=center,radius= center[0])
@@ -48,21 +49,21 @@ def checkWinner():
      if player1> player2:
          text = font.render("Player 1 Won",True,"white")
          screen.blit(text, (150,0))
-     if play1bet == True:
-         text2 = font.render("Your bet was right",True,"white")
-         screen.blit(text2,(150,50))
-     elif play2bet == True:
-         text2 = font.render("Your bet was wrong",True,"white")
-         screen.blit(text2,(150,100))
+         if play1bet == True:
+            text2 = font.render("Your bet was right",True,"white")
+            screen.blit(text2,(150,50))
+         elif play2bet == True:
+            text2 = font.render("Your bet was wrong",True,"white")
+            screen.blit(text2,(150,100))
      elif player2> player1:
-         text = font.render("Player 2 Won",True,"white")
-         screen.blit(text, (150, 0))
-     if play1bet == True:
-            text2 = font.render("Your bet was Wrong",True,"white")
-            screen.blit(text2,(150,200))
-     elif play2bet == True:
-            text2 = font.render("Your bet was Right",True,"white")
-            screen.blit(text2,(150,250))
+            text = font.render("Player 2 Won",True,"white")
+            screen.blit(text, (150, 0))
+            if play1bet == True:
+                text2 = font.render("Your bet was Wrong",True,"white")
+                screen.blit(text2,(150,200))
+            elif play2bet == True:
+                text2 = font.render("Your bet was Right",True,"white")
+                screen.blit(text2,(150,250))
      else:
         text = font.render("Player No One Won",True,"white")
         screen.blit(text, (150, 0))
@@ -98,8 +99,7 @@ def dartGame():
 events = True 
 while events:
      for event in pygame.event.get():
-            player1 = 0 
-            player2 = 0 
+            
             if event.type == pygame.MOUSEBUTTONDOWN:
                  drawBoard()
                  if rect1.collidepoint(event.pos):
