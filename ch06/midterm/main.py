@@ -1,18 +1,32 @@
 import turtle 
 import random
-def smallerstars(numstars,sizebigstar,star):
-    for _ in range(numstars):
-         #NEXT STAR WILL BE SMALLER 
-         sizebigstar = sizebigstar-30 
-         if sizebigstar > 0:
-            star.penup()
-            star.goto(star.pos()+(15,-20))
-            star.pendown()
-            createturtle(sizebigstar,star)
+def smallerpoly(poly):
+    '''
+    draws a specified number of stars which each 
+    star being smaller than the last one 
+    '''
+    numpoly = 10 
+    sizeofpoly = 200
+    tranform= (15,-20)
+    poly.penup()
+    poly.goto((-150,150))
+    for _ in range(numpoly):
+         sizeofpoly = sizeofpoly-30 
+         if sizeofpoly > 0:
+            poly.penup()
+            poly.goto(poly.pos()+tranform)
+            poly.pendown()
+            createturtle(sizeofpoly,poly)
 def setangle(sides):
+    '''
+    Specifies the angle of shape with a given number of sides
+    '''
     angle = 360 /sides
     return angle     
 def createturtle(sizebigstar,star):
+    '''
+    Creates a polygon object and sets a random color to it 
+    '''
     colors = ["red","green","blue","purple","yellow","grey","orange","pink"]
     sides = 5 
     angle = setangle(sides)
@@ -21,11 +35,7 @@ def createturtle(sizebigstar,star):
         star.pencolor(random.choice(colors))
         star.right(angle)
 def main():    
-    star = turtle.Turtle()
-    star.penup()
-    star.goto((-150,150))
-    numstar = 10 
-    sizeofpolygon = 200
-    smallerstars(numstar,sizeofpolygon,star)
+    polygon = turtle.Turtle()
+    smallerpoly(polygon)
     turtle.done()
 main()
