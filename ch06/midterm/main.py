@@ -1,6 +1,6 @@
 import turtle 
 import random
-def smallerpoly(poly):
+def smallerpoly(poly,numpoly,sizeofpoly):
     '''
     draws a specified number of stars which each 
     star being smaller than the last one 
@@ -36,6 +36,6 @@ def createturtle(sizebigstar,star):
         star.right(angle)
 def main():    
     polygon = turtle.Turtle()
-    smallerpoly(polygon)
+    smallerpoly(polygon,numpoly = 10,sizeofpoly = 200)
     turtle.done()
 main()
