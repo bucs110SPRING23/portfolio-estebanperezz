@@ -27,16 +27,32 @@ print(type(turtle.Turtle()))
 # interface: the functions and variables of an object 
 # t.forward() part of the interface 
 # point - make it a class ourselves
-class Point:
-    #usually classes go in their own file, one class per file 
-    def __init__(self):
-        self.x = 0 
-        self.y  =0  
-        self.color = ""
-        pass 
+#class are named with TitleCase
+import random,pygame
 import point
 p1= point.Point() 
 p1.x = 10 
 p2 = point.Point()
 p2.y = 5 
 p1.color = "red"
+points= []
+for p in range(10):
+    x = random.randint(0,100)
+    y = random.randint(0,200)
+    points.append(point.Point(x,y,"orange"))
+t = turtle.Turtle()
+for p in points:
+    t.color(p.color)
+    t.goto((p.x,p.y))
+
+##MVC - Module View Controller - for gui projects - accumulator pattern 
+##for GUI Programs - like the accumulator pattern - design patterns 
+#Design patterns - language independent 
+##View - displays things on the screen - pygame --turtle 
+##Model is usually a class and contains data for the program 
+pygame.init()
+display = pygame.display.set_mode()
+p1 = point.LED(x=100,y=100)
+pygame.draw.circle(display,p1.color,(p1.rect.x,p1.rect.y),p1.radius)
+while True:
+    pygame.display.flip()
