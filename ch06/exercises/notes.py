@@ -30,6 +30,28 @@ print(type(turtle.Turtle()))
 #class are named with TitleCase
 import random,pygame
 import point
+from pygame import rect
+def mainloop(display):
+    points = []
+    while True:
+        for event in pygame.get():
+            point_deleted = False
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                for p in points:
+                    if p.rect.collidepoint(event.center):
+                        del p 
+                        point_deleted = True 
+                if not point_deleted:
+                    p = point.Point(*event.pos)
+                    points.append(p)
+                    
+
+            
+        display.fill("white")
+        for p in points:
+            pygame.draw.circle(display,p.color,p.rect.center,p.rect/2)
+        pygame.display.flip()
+    
 p1= point.Point() 
 p1.x = 10 
 p2 = point.Point()
@@ -50,8 +72,11 @@ for p in points:
 #Design patterns - language independent 
 ##View - displays things on the screen - pygame --turtle 
 ##Model is usually a class and contains data for the program 
-pygame.init()
-display = pygame.display.set_mode()
+def main():
+
+    pygame.init()
+    display = pygame.display.set_mode()
+main()
 p1 = point.LED(x=100,y=100)
 pygame.draw.circle(display,p1.color,(p1.rect.x,p1.rect.y),p1.radius)
 while True:
