@@ -7,7 +7,7 @@ class GameWindow:
     def __init__(self,x,y,idnum,imgfile ) -> None:
     
         pass
-    def  newTerrain(self):
+    def newTerrain(self):
         """Generates new terrain 
         args:none
         return random array of block values that will determine what kind of blocks will be visiblew 
