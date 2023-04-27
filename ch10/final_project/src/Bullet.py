@@ -12,8 +12,9 @@ class Bullet:
 
     def move(self):
         """
-        moves the bullet object up
-        args: None
-        return: None
+        moves the bullet object up by a random ammount when close to player.
+
+        args: none
+        return: random int between 0 and player height 
         """
         # implementation for move
