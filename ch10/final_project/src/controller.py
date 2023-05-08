@@ -141,7 +141,7 @@ class Controller:
                         if self.new_x <= 750:
                             self.player_rect_x = self.new_x
                         elif self.player_rect_x >= 650:
-                            self.player_rect_x = 0
+                            #self.player_rect_x = 0
                             self.randstart = self.randstart - 100
                             self.randend += 100 
                             self.level +=1 
@@ -150,7 +150,7 @@ class Controller:
                 for s in self.blockgroup:
                     collisions = pygame.sprite.spritecollide(s, self.playergroup, False)
                 if collisions:
-                    self.player_rect_x = 0 
+                   # self.player_rect_x = 0 
                     self.player_rect_y = 400
 
                     #time.sleep(3)

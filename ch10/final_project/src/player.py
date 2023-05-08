@@ -17,7 +17,7 @@ class Player(pygame.sprite.Sprite):
         self.isjumping = False
         self.jump_speed = 10
         self.fall_speed = 5 
-        path = os.path.join('ch10/final_project/assets','mario.jpeg')
+        path = os.path.join('assets','mario.jpeg')
         self.image = pygame.image.load(path)
         self.rect = self.image.get_rect()
         self.rect.x = x 

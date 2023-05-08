@@ -8,7 +8,7 @@ class Block(pygame.sprite.Sprite):
         super().__init__()
         self.x = x 
         self.y = y 
-        path = os.path.join('ch10/final_project/assets','block.jpg')
+        path = os.path.join('assets','block.jpg')
        
         self.image = pygame.image.load(path)
         self.rect = self.image.get_rect()
