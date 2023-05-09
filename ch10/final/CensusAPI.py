@@ -16,6 +16,6 @@ class CensusAPI:
             population = int(_[1])
             self.hispanicpopulation[state] = population
         most_hispanic_state = max(self.hispanicpopulation, key = self.hispanicpopulation.get) 
-        least_hispanic_state = min(self.hispanicpopulation, key = self.hispanicpopulation.get) 
-        print( "The most hispanic state is," + most_hispanic_state)
-        print( "The least hispanic state is," + least_hispanic_state)
+        least_hispanic_state = min(self.hispanicpopulation, key = self.hispanicpopulation.get)
+        print(most_hispanic_state) 
+        return ( "The most hispanic state is," + most_hispanic_state, "The least hispanic state is," + least_hispanic_state)
