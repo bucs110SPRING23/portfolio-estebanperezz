@@ -17,7 +17,6 @@ class Tmbd():
             listbox.delete(0,END)
 
             for _ in json_file['results']:
-                print (_)
                 title = _.get('title')
                 averagerating = _.get('vote_average')
                 self.titles.append(title)
